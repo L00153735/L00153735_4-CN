@@ -11,6 +11,7 @@ The following table lists the versions of our project that are currently being s
 | 4.0.x   | :white_check_mark: |
 | < 4.0   | :x:                |
 
+
 We recommend upgrading to a supported version as soon as possible to ensure your system remains secure.
 
 ## Reporting a Vulnerability
