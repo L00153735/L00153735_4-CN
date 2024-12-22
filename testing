@@ -1,0 +1,9 @@
+import pytest
+from celestial_navigation import is_visible 
+
+def test_is_visible():
+    
+    observer_location = (40.7128, -74.0060)  # New York City coordinates
+    star_coordinates = (37.954560, 89.264108)  # Polaris coordinates
+    observation_time = "2023-01-01T00:00:00"
+    assert is_visible(observer_location, star_coordinates, observation_time) == True, "Polaris should be visible from New York on Jan 1, 2023"
