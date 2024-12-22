@@ -1,0 +1,10 @@
+def is_visible(observer_location, star_coordinates, observation_time):
+    try:
+        star = SkyCoord(ra=star_coordinates[0] * u.deg, dec=star_coordinates[1] * u.deg)
+        observation_time = Time(observation_time)
+        observer = EarthLocation(lat=observer_location[0] * u.deg, lon=observer_location[1] * u.deg)
+        altaz = star.transform_to(AltAz(obstime=observation_time, location=observer))
+        return altaz.alt > 0
+    except Exception as e:
+        print(f"Error in input data: {e}")
+        return False
